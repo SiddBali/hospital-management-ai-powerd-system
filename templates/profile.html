@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}My Profile - Prescripto{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-6 py-10">
+    <h1 class="text-3xl font-bold text-[#1a365d] mb-8 drop-shadow-sm">My Profile</h1>
+    
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] rounded-2xl p-8">
+        
+        <!-- Profile Header -->
+        <div class="flex flex-col md:flex-row gap-8 items-start md:items-center border-b border-white/20 pb-8 mb-8">
+            <div class="w-32 h-32 bg-gray-300 rounded-2xl flex items-center justify-center text-gray-500 overflow-hidden shadow-md">
+                <!-- User Profile Image Placeholder -->
+                <span class="text-sm">Profile Img</span>
+            </div>
+            
+            <div class="flex-grow">
+                <h2 class="text-3xl font-bold text-[#1a365d] mb-2">Edward Vincent</h2>
+                <div class="flex gap-4">
+                    <button class="px-4 py-2 bg-white/20 border border-[#5F6FFF] text-[#5F6FFF] font-medium rounded-lg hover:bg-[#5F6FFF] hover:text-white transition-colors">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold text-[#1a365d] mb-4 border-b border-white/10 pb-2 inline-block">CONTACT INFORMATION</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-[#2d3748]">
+                <div>
+                    <span class="block text-sm opacity-70 mb-1">Email id:</span>
+                    <span class="text-[#5F6FFF] font-medium">richardjameswap@gmail.com</span>
+                </div>
+                <div>
+                    <span class="block text-sm opacity-70 mb-1">Phone:</span>
+                    <span class="font-medium">+1  123 456 7890</span>
+                </div>
+                <div class="md:col-span-2">
+                    <span class="block text-sm opacity-70 mb-1">Address:</span>
+                    <span class="font-medium">57th Cross, Richmond Circle, Church Road, London</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basic Information -->
+        <div>
+            <h3 class="text-lg font-bold text-[#1a365d] mb-4 border-b border-white/10 pb-2 inline-block">BASIC INFORMATION</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-[#2d3748]">
+                <div>
+                    <span class="block text-sm opacity-70 mb-1">Gender:</span>
+                    <span class="font-medium">Male</span>
+                </div>
+                <div>
+                    <span class="block text-sm opacity-70 mb-1">Birthday:</span>
+                    <span class="font-medium">20 July, 2024</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

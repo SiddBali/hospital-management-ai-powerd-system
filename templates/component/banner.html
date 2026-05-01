@@ -1,0 +1,32 @@
+<div class="flex flex-col items-center justify-center mt-20 px-4">
+    <div
+        class="max-w-6xl max-h-3xl h-full w-full bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] rounded-3xl py-6 px-10 flex flex-col md:flex-row items-center gap-6 pointer-events-auto">
+
+        <!-- Left side: Image -->
+        <div class="w-full md:w-1/2 flex justify-center">
+            <img src="{{ url_for('static', filename='images/main_banner_doctor_no_bg.png') }}" alt="Doctor"
+                class="w-full max-w-sm rounded-2xl drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] object-cover">
+        </div>
+
+
+
+        <!-- Right side: Text & Buttons -->
+        <div class="w-full mt-10 md:w-1/2 text-center md:text-left">
+
+            <h1
+                class="text-[1.7rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-white mb-4 drop-shadow-sm whitespace-nowrap">
+                Welcome to HealthCare<span class="text-[#4facfe]">+</span></h1>
+
+            <p class="text-xl text-white mb-10 max-w-2xl mx-auto md:mx-0">Experience the future of medical appointments.
+                Schedule, manage, and consult with top doctors from the comfort of your home.</p>
+            <div class="flex flex-wrap gap-6 justify-center md:justify-start">
+                <button
+                    class="bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-white border-none py-[16px] px-[36px] text-[1.15rem] font-semibold rounded-[50px] cursor-pointer transition-all duration-300 ease-out hover:-translate-y-[3px] hover:shadow-[0_15px_25px_rgba(79,172,254,0.4)] shadow-[0_10px_20px_rgba(79,172,254,0.3)]">Book
+                    Appointment</button>
+                <button
+                    class="bg-white/20 backdrop-blur-sm border border-white/40 text-[#1a365d] py-[16px] px-[36px] text-[1.15rem] font-semibold rounded-[50px] cursor-pointer transition-all duration-300 ease-out hover:bg-white/30 hover:-translate-y-[3px]">Learn
+                    More</button>
+            </div>
+        </div>
+    </div>
+</div>

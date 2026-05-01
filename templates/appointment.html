@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Appointment - Prescripto{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-6 py-10">
+    <!-- Doctor Info Section -->
+    <div class="flex flex-col md:flex-row gap-8 mb-12">
+        <!-- Image Container -->
+        <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+            <div class="bg-[#5F6FFF] rounded-2xl w-full max-w-[300px] h-[350px] flex items-center justify-center overflow-hidden shadow-lg">
+                 <!-- Placeholder for Doctor Image -->
+                 <div class="text-white opacity-50 font-medium">Doctor Image</div>
+            </div>
+        </div>
+
+        <!-- Doctor Details Card -->
+        <div class="w-full md:w-2/3">
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] rounded-2xl p-8 h-full">
+                <div class="flex items-center gap-2 mb-2">
+                    <h1 class="text-3xl font-bold text-[#1a365d]">Dr. Richard James</h1>
+                    <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                
+                <div class="flex items-center gap-2 text-sm text-[#2d3748] mb-6">
+                    <span class="font-medium">MBBS - General physician</span>
+                    <span class="py-1 px-3 border border-white/40 rounded-full text-xs bg-white/20">3 Years</span>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-[#1a365d] mb-2 flex items-center gap-2">
+                        About 
+                        <svg class="w-4 h-4 text-[#1a365d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </h3>
+                    <p class="text-[#2d3748] text-sm leading-relaxed max-w-[600px]">
+                        Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. James has a strong commitment to delivering comprehensive medical care.
+                    </p>
+                </div>
+
+                <div>
+                    <span class="text-[#2d3748] font-medium">Appointment fee: </span>
+                    <span class="font-bold text-[#1a365d] text-xl">$50</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Slots Section -->
+    <div class="max-w-[700px] mx-auto md:ml-auto md:mr-[10%]">
+        <h3 class="text-xl font-bold text-[#1a365d] mb-6 text-center md:text-left">Booking slots</h3>
+        
+        <!-- Days -->
+        <div class="flex gap-4 overflow-x-auto pb-4 justify-center md:justify-start">
+            <!-- Selected Day -->
+            <div class="min-w-[70px] bg-[#5F6FFF] text-white py-4 px-2 rounded-full flex flex-col items-center justify-center cursor-pointer shadow-md">
+                <span class="text-sm">MON</span>
+                <span class="text-lg font-bold">10</span>
+            </div>
+            <!-- Unselected Days -->
+            <div class="min-w-[70px] bg-white/20 backdrop-blur-sm border border-white/40 text-[#2d3748] py-4 px-2 rounded-full flex flex-col items-center justify-center cursor-pointer transition-colors hover:bg-white/40">
+                <span class="text-sm">TUE</span>
+                <span class="text-lg font-bold">11</span>
+            </div>
+            <div class="min-w-[70px] bg-white/20 backdrop-blur-sm border border-white/40 text-[#2d3748] py-4 px-2 rounded-full flex flex-col items-center justify-center cursor-pointer transition-colors hover:bg-white/40">
+                <span class="text-sm">WED</span>
+                <span class="text-lg font-bold">12</span>
+            </div>
+            <div class="min-w-[70px] bg-white/20 backdrop-blur-sm border border-white/40 text-[#2d3748] py-4 px-2 rounded-full flex flex-col items-center justify-center cursor-pointer transition-colors hover:bg-white/40">
+                <span class="text-sm">THU</span>
+                <span class="text-lg font-bold">13</span>
+            </div>
+        </div>
+
+        <!-- Times -->
+        <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+            <div class="py-2 px-6 rounded-full border border-white/40 bg-white/20 text-[#2d3748] cursor-pointer hover:bg-white/40 transition-colors">08:00 am</div>
+            <div class="py-2 px-6 rounded-full border border-white/40 bg-white/20 text-[#2d3748] cursor-pointer hover:bg-white/40 transition-colors">08:30 am</div>
+            <div class="py-2 px-6 rounded-full bg-[#5F6FFF] text-white cursor-pointer shadow-md">09:00 am</div>
+            <div class="py-2 px-6 rounded-full border border-white/40 bg-white/20 text-[#2d3748] cursor-pointer hover:bg-white/40 transition-colors">09:30 am</div>
+            <div class="py-2 px-6 rounded-full border border-white/40 bg-white/20 text-[#2d3748] cursor-pointer hover:bg-white/40 transition-colors">10:00 am</div>
+            <div class="py-2 px-6 rounded-full border border-white/40 bg-white/20 text-[#2d3748] cursor-pointer hover:bg-white/40 transition-colors">10:30 am</div>
+        </div>
+
+        <div class="mt-10 flex justify-center md:justify-start">
+            <button class="bg-[#5F6FFF] text-white border-none py-[14px] px-[40px] text-[1.1rem] font-medium rounded-[50px] cursor-pointer transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_10px_20px_rgba(95,111,255,0.3)] shadow-md w-full md:w-auto">
+                Book an appointment
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

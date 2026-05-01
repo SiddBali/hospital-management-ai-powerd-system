@@ -1,0 +1,31 @@
+<!-- navbar.html -->
+
+<nav
+        class="sticky top-4 z-[100] mx-auto w-11/12 max-w-8xl flex items-center justify-between px-8 py-3 bg-white/20 backdrop-blur-md border border-white/40 shadow-lg rounded-full pointer-events-auto">
+        <div class="flex items-center gap-2 text-[1.8rem] font-bold text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                clip-rule="evenodd" />
+                </svg>
+                Mediconnect÷
+        </div>
+              <ul class="flex gap-[30px] list-none m-0 p-0 text-white">
+                <li><a href="#"
+                                class="text-white font-semibold text-[1.05rem] transition-colors duration-300 hover:text-[#5F6FFF]">Home</a>
+                </li>
+                <li><a href="#"
+                                class="text-white font-semibold text-[1.05rem] transition-colors duration-300 hover:text-[#5F6FFF]">All
+                                Doctors</a></li>
+                <li><a href="#"
+                                class="text-white font-semibold text-[1.05rem] transition-colors duration-300 hover:text-[#5F6FFF]">About</a>
+                </li>
+                <li><a href="#"
+                                class="text-white font-semibold text-[1.05rem] transition-colors duration-300 hover:text-[#5F6FFF]">Contact</a>
+                </li>
+        </ul>
+
+        <a href="{{ url_for('signup') }}"
+                class="bg-[#5F6FFF] text-white border-none py-[12px] px-[36px] text-[1.05rem] font-medium rounded-[50px] cursor-pointer transition-all duration-300 ease-out hover:-translate-y-[2px] hover:shadow-[0_10px_20px_rgba(95,111,255,0.3)] shadow-md hidden md:block decoration-none">Create
+                account</a>
+</nav>

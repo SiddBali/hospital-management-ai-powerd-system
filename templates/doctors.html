@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}All Doctors - Prescripto{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-6 py-10">
+    <h1 class="text-3xl font-bold text-[#1a365d] mb-8 text-center drop-shadow-sm">Find Your Specialist</h1>
+    
+    <div class="flex flex-col md:flex-row gap-8">
+        <!-- Sidebar Filters -->
+        <div class="w-full md:w-1/4">
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] rounded-2xl p-6 sticky top-[100px]">
+                <h3 class="text-xl font-bold text-[#1a365d] mb-4">Specialties</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="/doctors/general-physician" class="block py-2 px-4 rounded-lg bg-white/20 hover:bg-[#5F6FFF] hover:text-white transition-colors cursor-pointer text-[#2d3748]">General physician</a></li>
+                    <li><a href="/doctors/gynecologist" class="block py-2 px-4 rounded-lg bg-white/20 hover:bg-[#5F6FFF] hover:text-white transition-colors cursor-pointer text-[#2d3748]">Gynecologist</a></li>
+                    <li><a href="/doctors/dermatologist" class="block py-2 px-4 rounded-lg bg-white/20 hover:bg-[#5F6FFF] hover:text-white transition-colors cursor-pointer text-[#2d3748]">Dermatologist</a></li>
+                    <li><a href="/doctors/pediatricians" class="block py-2 px-4 rounded-lg bg-white/20 hover:bg-[#5F6FFF] hover:text-white transition-colors cursor-pointer text-[#2d3748]">Pediatricians</a></li>
+                    <li><a href="/doctors/neurologist" class="block py-2 px-4 rounded-lg bg-white/20 hover:bg-[#5F6FFF] hover:text-white transition-colors cursor-pointer text-[#2d3748]">Neurologist</a></li>
+                    <li><a href="/doctors/gastroenterologist" class="block py-2 px-4 rounded-lg bg-white/20 hover:bg-[#5F6FFF] hover:text-white transition-colors cursor-pointer text-[#2d3748]">Gastroenterologist</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Doctors Grid -->
+        <div class="w-full md:w-3/4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Example Doctor Card 1 -->
+                <a href="/appointment/doc1" class="block group">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.05)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(95,111,255,0.2)]">
+                        <div class="bg-[#eaefff] h-48 w-full flex items-center justify-center">
+                            <!-- Placeholder for Doctor Image -->
+                            <div class="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center text-gray-500">Img</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 text-sm text-green-500 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-green-500"></span> Available
+                            </div>
+                            <h3 class="text-xl font-bold text-[#1a365d] group-hover:text-[#5F6FFF] transition-colors">Dr. Richard James</h3>
+                            <p class="text-[#2d3748]">General physician</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Example Doctor Card 2 -->
+                <a href="/appointment/doc2" class="block group">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.05)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(95,111,255,0.2)]">
+                        <div class="bg-[#eaefff] h-48 w-full flex items-center justify-center">
+                            <div class="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center text-gray-500">Img</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 text-sm text-green-500 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-green-500"></span> Available
+                            </div>
+                            <h3 class="text-xl font-bold text-[#1a365d] group-hover:text-[#5F6FFF] transition-colors">Dr. Emily Larson</h3>
+                            <p class="text-[#2d3748]">Gynecologist</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Example Doctor Card 3 -->
+                <a href="/appointment/doc3" class="block group">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.05)] rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(95,111,255,0.2)]">
+                        <div class="bg-[#eaefff] h-48 w-full flex items-center justify-center">
+                            <div class="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center text-gray-500">Img</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 text-sm text-green-500 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-green-500"></span> Available
+                            </div>
+                            <h3 class="text-xl font-bold text-[#1a365d] group-hover:text-[#5F6FFF] transition-colors">Dr. Sarah Patel</h3>
+                            <p class="text-[#2d3748]">Dermatologist</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

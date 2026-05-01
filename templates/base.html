@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Medical Appointment System{% endblock %}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(95, 111, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(95, 111, 255, 0.8);
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+
+<body class="m-0 p-0 w-full font-sans bg-transparent min-h-screen text-[#1f2937]">
+    <!-- 3D Background - fixed behind the UI -->
+    <div class="fixed top-0 left-0 w-screen h-screen -z-10 bg-[#dbe4f1]">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.85/build/spline-viewer.js"></script>
+        <spline-viewer class="w-full h-full block" events-target="global"
+            url="https://prod.spline.design/KzbfjvBP9nzHO1x0/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- Foreground UI content wrapper -->
+    <div id="scroll-container" data-scroll-container
+        class="relative z-10 flex flex-col min-h-screen pointer-events-none">
+        <div class="w-full flex-grow flex flex-col">
+            {% include 'component/navbar.html' %}
+
+            <main class="flex-grow">
+                {% block content %}{% endblock %}
+            </main>
+
+            {% include 'component/footer.html' %}
+        </div>
+    </div>
+
+    <!-- Locomotive Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector('#scroll-container'),
+                smooth: true,
+                multiplier: 1 // Adjust scroll speed if needed
+            });
+
+            // Add dynamic transition/parallax to Spline element on scroll
+            scroll.on('scroll', (args) => {
+                const scrollY = args.scroll.y;
+                const spline = document.querySelector('spline-viewer');
+                if (spline) {
+                    // Removed the downward movement. Now it only zooms in smoothly!
+                    spline.style.transform = `scale(${1 + scrollY * 0.0003})`;
+                }
+            });
+
+            // Optional: Update Locomotive Scroll on resize or dynamic content load
+            setTimeout(() => {
+                scroll.update();
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
